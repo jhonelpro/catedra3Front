@@ -60,6 +60,7 @@ export class SignUpComponent {
       console.log('Error en el registro', error);
       if (error instanceof HttpErrorResponse) {
         this.toastService.error('Error en el registro.');
+        this.forms.get('password')?.reset();
       }
     }
   }

@@ -2,12 +2,15 @@ import { inject } from '@angular/core';
 import { CanActivateFn, Router } from '@angular/router';
 import { LocalStorageServiceService } from '../../_shared/services/local-storage-service.service';
 import { JWTPayload } from '../../_shared/interfaces/JWTpayload';
+import { ToastService } from '../../_shared/services/toast.service';
 
 export const authGuardGuard: CanActivateFn = (route, state) => {
 
   const router = inject(Router);
 
   const localStorageService = inject(LocalStorageServiceService);
+
+  const toasts = inject(ToastService);
 
   const token = localStorageService.getVariable('token');
 

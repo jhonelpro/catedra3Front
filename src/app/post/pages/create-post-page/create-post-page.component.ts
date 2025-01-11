@@ -52,7 +52,7 @@ export class CreatePostPageComponent {
   
       const file = control.value as File;
       const validMimeTypes = ['image/png', 'image/jpeg'];
-      const validExtensions = ['.png', '.jpeg'];
+      const validExtensions = ['.png', '.jpg'];
       const maxSize = 5 * 1024 * 1024;
   
       const errors: ValidationErrors = {};

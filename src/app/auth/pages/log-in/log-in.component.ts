@@ -63,9 +63,9 @@ export class LogInComponent implements OnInit {
           this.confirmMessage = 'Usuario logueado correctamente.';
           this.toastService.success('Usuario logueado correctamente.');
         } else {
-          console.log('Error al loguear el usuario', this.authService.errors);
+          console.log('Credenciales inválidas"', this.authService.errors);
           const lastError = this.authService.errors[this.authService.errors.length - 1];
-          this.toastService.error(lastError || 'Error al loguear el usuario.');
+          this.toastService.error(lastError || 'Credenciales inválidas.');
         }
       } else {
         console.log('Error al loguear el usuario', this.authService.errors);
